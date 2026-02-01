@@ -1,0 +1,190 @@
+/* Responsive Design System */
+
+/* Base Layout (Mobile First) */
+.app-layout {
+    min-height: 100vh;
+    background: var(--bg-primary);
+}
+
+.main-content {
+    min-height: 100vh;
+    padding-bottom: 80px;
+    background: var(--bg-primary);
+    position: relative;
+}
+
+/* Mobile First Defaults */
+.desktop-only {
+    display: none !important;
+}
+
+.mobile-only {
+    display: flex !important;
+}
+
+/* Responsive Padding Utilities */
+.page-padding {
+    padding: 1.5rem 1rem;
+}
+
+/* Dashboard Grid Default (Mobile Stack) */
+.dashboard-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+/* Page Layout Defaults (Mobile) */
+.two-col-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.chat-container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Health Page Grid (Mobile) */
+.health-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+/* Profile Grid (Mobile) */
+.profile-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+/* Chat Layout Wrapper */
+.chat-layout-wrapper {
+    padding: 1rem;
+}
+
+.chat-grid-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+/* Tablet Breakpoint */
+@media (min-width: 768px) {
+    .page-padding {
+        padding: 2rem 2rem;
+    }
+
+    .chat-layout-wrapper {
+        padding: 1.5rem;
+    }
+}
+
+/* Desktop Breakpoint */
+@media (min-width: 1024px) {
+    .desktop-only {
+        display: flex !important;
+    }
+
+    .mobile-only {
+        display: none !important;
+    }
+
+    /* Layout Wrapper */
+    .app-layout {
+        display: flex;
+        min-height: 100vh;
+        background: var(--bg-primary);
+    }
+
+    .main-content {
+        flex: 1;
+        margin-left: 280px;
+        /* Sidebar width */
+        padding: 2rem 3rem;
+        padding-bottom: 2rem;
+        min-height: 100vh;
+        background: var(--bg-primary);
+    }
+
+    /* Responsive Padding for Desktop */
+    .page-padding {
+        padding: 2rem 3rem;
+    }
+
+    /* Dashboard Grid Overhaul */
+    .dashboard-grid {
+        display: grid;
+        grid-template-columns: 350px 1fr 300px;
+        grid-template-rows: auto auto;
+        gap: 2rem;
+        align-items: start;
+    }
+
+    /* Specific Grid Areas */
+    .grid-col-1 {
+        grid-column: 1 / 2;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .grid-col-2 {
+        grid-column: 2 / 3;
+    }
+
+    .grid-col-3 {
+        grid-column: 3 / 4;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    /* Page Layouts */
+    .two-col-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+        align-items: start;
+    }
+
+    /* Health Page Grid */
+    .health-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 1.75rem;
+        align-items: start;
+    }
+
+    /* Profile Grid */
+    .profile-grid {
+        display: grid;
+        grid-template-columns: minmax(280px, 320px) 1fr;
+        gap: 2rem;
+        align-items: start;
+    }
+
+    /* Chat Layout */
+    .chat-layout-wrapper {
+        padding: 2rem;
+    }
+
+    .chat-grid-container {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) 300px;
+        gap: 2rem;
+    }
+
+    .chat-container {
+        max-width: 900px;
+        margin: 0 auto;
+        border: 1px solid var(--border-color);
+        border-radius: var(--radius-lg);
+        overflow: hidden;
+        height: calc(100vh - 4rem) !important;
+        /* Fixed height for chat on desktop */
+    }
+}

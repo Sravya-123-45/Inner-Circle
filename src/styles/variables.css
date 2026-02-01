@@ -1,0 +1,135 @@
+:root {
+  /* Colors - Holographic Morning Light Theme */
+  /* Colors - Holographic Morning Light Theme */
+  --bg-primary: #EBF1F5;
+  /* Distinct Blue-Grey (Separation) */
+  --bg-secondary: #EEF4FF;
+  /* Very Light Airy Blue */
+
+  /* Card Background: Solid White for maximum contrast */
+  --bg-card: #FFFFFF;
+
+  --bg-glass: rgba(255, 255, 255, 0.95);
+  /* Almost solid white glass */
+
+  --text-primary: #111827;
+  /* Near Black for readability */
+  --text-secondary: #374151;
+  /* Dark Grey for secondary text */
+  /* Muted Gray-Blue */
+  --text-muted: #9CA3AF;
+  /* Light Gray */
+
+  --primary-color: #7B8CFF;
+  /* Calm Lavender-Blue */
+  --primary-gradient: linear-gradient(135deg, #7B8CFF 0%, #A18AFF 100%);
+  /* Lavender Flow */
+
+  --accent-color: #6EDCC4;
+  /* Soft Mint Green */
+  --accent-gradient: linear-gradient(135deg, #6EDCC4 0%, #8CE6CC 100%);
+
+  --highlight-color: #8FD3F4;
+  /* Holographic Blue */
+  --emotional-accent: #FFE7A3;
+  /* Gentle Pastel Yellow */
+
+  --holographic-gradient: linear-gradient(135deg, #8FD3F4 0%, #A18AFF 50%, #FBC8EC 100%);
+  /* Signature Holographic */
+
+  --danger-color: #FF8BA7;
+  /* Soft Rose Red */
+
+  --border-color: #EBF0F5;
+  /* Extremely Subtle Light Gray */
+
+  /* Typography - Rounded/Friendly */
+  --font-family: 'Rubik', 'Outfit', 'Nunito', system-ui, sans-serif;
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.25rem;
+  --text-2xl: 1.5rem;
+  --text-3xl: 1.875rem;
+
+  /* Spacing */
+  --space-2: 0.5rem;
+  --space-4: 1rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+
+  /* Radius - Extra Rounded for Friendliness */
+  --radius-sm: 1rem;
+  --radius-md: 1.5rem;
+  --radius-lg: 2rem;
+  --radius-xl: 2.5rem;
+
+  /* Shadows - Colored & Diffuse (No Black) */
+  --shadow-sm: 0 4px 12px rgba(123, 140, 255, 0.05);
+  --shadow-lg: 0 10px 40px -10px rgba(123, 140, 255, 0.15);
+
+  /* Animation */
+  --transition-fast: 0.2s ease;
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: var(--font-family);
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Utilities */
+.glass-panel {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow-lg);
+  border-radius: var(--radius-lg);
+  /* Solid pastel look, no blur needed */
+}
+
+.text-gradient {
+  background: var(--primary-gradient);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.holographic-text {
+  background: var(--holographic-gradient);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  font-family: inherit;
+  transition: var(--transition-fast);
+}
+
+input {
+  background: #FFFFFF;
+  border: 1px solid var(--border-color);
+  color: var(--text-primary);
+  padding: var(--space-2) var(--space-4);
+  border-radius: var(--radius-sm);
+  outline: none;
+  font-family: inherit;
+  box-shadow: var(--shadow-sm);
+}
+
+input:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 4px rgba(123, 140, 255, 0.1);
+}
